@@ -35,13 +35,6 @@ const NewPost = () => {
       <div className="rw-segment-main">
         <PostForm onSave={onSave} loading={loading} error={error} />
       </div>
-      <div id="main">
-        <form id="chatBox">
-          <textarea id="chatItem"></textarea>
-          <br className="spacer" />
-          <input type="submit" value="send this post" />
-        </form>
-      </div>
     </div>
   )
 }

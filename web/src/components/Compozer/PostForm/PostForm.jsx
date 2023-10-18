@@ -13,8 +13,17 @@ const PostForm = (props) => {
   }
 
   return (
+    <>
+    {/* <div id="main">
+        <form id="chatBox">
+          <textarea id="chatItem"></textarea>
+          <br className="spacer" />
+          <input type="submit" value="send this post" />
+        </form>
+      </div> */}
+
     <div className="rw-form-wrapper">
-      <Form onSubmit={onSubmit} error={props.error}>
+      <Form id="chatBox" onSubmit={onSubmit} error={props.error}>
         <FormError
           error={props.error}
           wrapperClassName="rw-form-error-wrapper"
@@ -48,8 +57,9 @@ const PostForm = (props) => {
           Body
         </Label>
 
-        <TextField
+        <textarea
           name="body"
+          id="chatItem"
           defaultValue={props.post?.body}
           className="rw-input"
           errorClassName="rw-input rw-input-error"
@@ -65,6 +75,7 @@ const PostForm = (props) => {
         </div>
       </Form>
     </div>
+    </>
   )
 }
 
