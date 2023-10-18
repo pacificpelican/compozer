@@ -1,0 +1,13 @@
+body {
+  font-family: sans-serif;
+}
+textarea#chatItem {
+  height: 80vh;
+  width: 94vw;
+}
+textarea#chatItem {
+  font-size: 1.5em;
+  padding-top: calc(1vw + 5pt);
+  padding-left: calc(1vh + 2pt);
+  line-height: 1.7;
+}

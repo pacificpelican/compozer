@@ -13,7 +13,8 @@ const HomePage = () => {
         <code>TEXT EDITOR INTERFACE ARCHITECTURAL TOOL</code>
       </p>
       <ul>
-        <li><a href="/posts">Posts</a></li>
+        <li><a href="/posts">Posts (default UI)</a></li>
+        <li><a href="/compozer">Compozer (beta app UI)</a></li>
       </ul>
     </>
   )
