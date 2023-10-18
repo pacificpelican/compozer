@@ -5,6 +5,7 @@ import {
   Label,
   TextField,
   Submit,
+  TextAreaField,
 } from '@redwoodjs/forms'
 
 const PostForm = (props) => {
@@ -57,7 +58,7 @@ const PostForm = (props) => {
           Body
         </Label>
 
-        <textarea
+        <TextAreaField
           name="body"
           id="chatItem"
           defaultValue={props.post?.body}
