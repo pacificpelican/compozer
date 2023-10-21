@@ -36,53 +36,17 @@ const PostsList = ({ posts }) => {
 
   return (
     <div className="rw-segment rw-table-wrapper-responsive">
-      <table className="rw-table">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Body</th>
-            <th>Created at</th>
-            <th>&nbsp;</th>
-          </tr>
-        </thead>
-        <tbody>
+      <div id="container">
+        <main class="UI-list">
+          <ul id="listUI">
           {posts.map((post) => (
-            <tr key={post.id}>
-              <td>{truncate(post.id)}</td>
-              <td>{truncate(post.title)}</td>
-              <td>{truncate(post.body)}</td>
-              <td>{timeTag(post.createdAt)}</td>
-              <td>
-                <nav className="rw-table-actions">
-                  <Link
-                    to={routes.post({ id: post.id })}
-                    title={'Show post ' + post.id + ' detail'}
-                    className="rw-button rw-button-small"
-                  >
-                    Show
-                  </Link>
-                  <Link
-                    to={routes.editPost({ id: post.id })}
-                    title={'Edit post ' + post.id}
-                    className="rw-button rw-button-small rw-button-blue"
-                  >
-                    Edit
-                  </Link>
-                  <button
-                    type="button"
-                    title={'Delete post ' + post.id}
-                    className="rw-button rw-button-small rw-button-red"
-                    onClick={() => onDeleteClick(post.id)}
-                  >
-                    Delete
-                  </button>
-                </nav>
-              </td>
-            </tr>
+            <li class="listUI-item" key={post.id}>
+              <b>{truncate(post.title)}{' '}<a href="#">🔗</a>{' '}</b>
+            </li>
           ))}
-        </tbody>
-      </table>
+          </ul>
+        </main>
+      </div>
     </div>
   )
 }

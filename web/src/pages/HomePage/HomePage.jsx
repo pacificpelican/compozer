@@ -14,7 +14,8 @@ const HomePage = () => {
       </p>
       <ul>
         <li><a href="/posts">Posts (default UI)</a></li>
-        <li><a href="/compozer">Compozer (beta app UI)</a></li>
+        <li><a href="/compozer">Compozer create screen (beta app UI)</a></li>
+        <li><a href="/viewer">Compozer list view (beta app UI)</a></li>
       </ul>
     </>
   )
