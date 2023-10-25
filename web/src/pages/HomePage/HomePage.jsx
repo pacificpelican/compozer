@@ -1,10 +1,12 @@
 import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import Banner from 'src/components/Banner/Banner'
 
 const HomePage = () => {
   return (
     <>
       <MetaTags title="Home" description="Home page" />
+      <Banner />
       <h1>Compoze[r]</h1>
       <h3>
         `<Link to={routes.home()}>Home</Link>`
