@@ -19,6 +19,9 @@ const HomePage = () => {
         <li><a href="/compozer">Compozer create screen (beta app UI)</a></li>
         <li><a href="/viewer">Compozer/Viewer list view (beta app UI)</a></li>
       </ul>
+      <aside id="keyboard-logo">
+        <img src="./pacificpelican_simple_logo_for_a_text_editor_wide_landscape_siz_68264788-d647-497d-87ad-ef9dfc5996ce.webp" alt="C Compozer logo with keyboard" class="front-logo" />
+      </aside>
     </>
   )
 }

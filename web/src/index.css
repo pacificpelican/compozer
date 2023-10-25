@@ -41,3 +41,7 @@ main.UI-list li a {
 aside#UI-list-sidebar {
   padding: 5pt;
 }
+
+aside#keyboard-logo img {
+  width: calc(30vw + 10pt);
+}
