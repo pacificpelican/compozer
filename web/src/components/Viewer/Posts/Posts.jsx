@@ -41,7 +41,16 @@ const PostsList = ({ posts }) => {
           <ul id="listUI">
           {posts.map((post) => (
             <li class="listUI-item" key={post.id}>
-              <b>{truncate(post.title)}{' '}<a href="#">🔗</a>{' '}</b>
+              <b>{truncate(post.title)}{' '}
+              <a href={`../permalinks/${post.id}`}
+
+
+                    className="rw-button rw-button-small"
+                  >
+                    🔗
+                    </a>{' '}
+
+              </b>
             </li>
           ))}
           </ul>
