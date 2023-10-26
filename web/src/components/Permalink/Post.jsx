@@ -12,6 +12,25 @@ const DELETE_POST_MUTATION = gql`
   }
 `
 
+const shareThis = (stuff) => {
+  console.log(stuff)
+  console.log(stuff.url)
+  const resultPara = document.querySelector('.result')
+  //  const rootUrl = window.location.origin
+  let shareData = {
+    title: stuff.title,
+    text: stuff.body,
+    url: stuff.url,
+  }
+  console.log('ok ' + stuff.body)
+  try {
+    navigator.share(shareData)
+    resultPara.textContent = 'MDN shared successfully'
+  } catch (err) {
+    resultPara.textContent = `Error: ${err}`
+  }
+}
+
 const Post = ({ post }) => {
   const [deletePost] = useMutation(DELETE_POST_MUTATION, {
     onCompleted: () => {
@@ -39,18 +58,10 @@ const Post = ({ post }) => {
         </header>
         <table className="rw-table">
           <tbody>
-            {/* <tr>
-              <th>Id</th>
-              <td>{post.id}</td>
-            </tr> */}
             <tr>
               <th>Title</th>
               <td>{post.title}</td>
             </tr>
-            {/* <tr>
-              <th>Body</th>
-              <td>{post.body}</td>
-            </tr> */}
             <tr>
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
@@ -62,9 +73,17 @@ const Post = ({ post }) => {
         <p>{post.body}</p>
       </main>
       <nav className="rw-button-group">
-        <a href="#" className="rw-button rw-button-green">
-          Share
-        </a>
+        <Link
+          onClick={() =>
+            shareThis({
+              url: window.location.origin + '/permalinks/' + post.id,
+              ...post,
+            })
+          }
+          className="rw-button rw-button-green"
+        >
+          share
+        </Link>
         <Link
           to={routes.editPost({ id: post.id })}
           className="rw-button rw-button-blue"
@@ -79,6 +98,7 @@ const Post = ({ post }) => {
           Delete
         </button>
       </nav>
+      <aside className="result"></aside>
     </>
   )
 }
