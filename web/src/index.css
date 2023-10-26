@@ -44,4 +44,5 @@ aside#UI-list-sidebar {
 
 aside#keyboard-logo img {
   width: calc(30vw + 10pt);
+  border-radius: 5pt;
 }

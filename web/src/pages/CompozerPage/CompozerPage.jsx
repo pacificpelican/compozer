@@ -10,9 +10,7 @@ const CompozerPage = () => {
       <Banner />
       <h1>COMPOZE_prototype</h1>
 
-      <p>
-        <Link to={routes.home()}>Home</Link>
-      </p>
+
 
       <NewPost />
     </>
