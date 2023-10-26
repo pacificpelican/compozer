@@ -5,7 +5,14 @@ const Banner = () => {
   return (
     <>
       <section id="top-banner">
-        <h1 id="banner"><Link to={routes.home()}>Compoze[r]</Link></h1>
+        <h1 id="banner">
+          <img
+            src="/compoze-logo.webp"
+            alt="Compoze[r] logo"
+            className="logoImg"
+          />
+          <Link to={routes.home()}>Compoze[r]</Link>
+        </h1>
       </section>
     </>
   )

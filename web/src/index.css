@@ -46,3 +46,12 @@ aside#keyboard-logo img {
   width: calc(30vw + 10pt);
   border-radius: 5pt;
 }
+
+section#top-banner img {
+  width: calc(2vw + 10pt);
+}
+
+h1 a {
+  text-decoration: none;
+  color: inherit;
+}
