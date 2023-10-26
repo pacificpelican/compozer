@@ -39,18 +39,18 @@ const Post = ({ post }) => {
         </header>
         <table className="rw-table">
           <tbody>
-            <tr>
+            {/* <tr>
               <th>Id</th>
               <td>{post.id}</td>
-            </tr>
+            </tr> */}
             <tr>
               <th>Title</th>
               <td>{post.title}</td>
             </tr>
-            <tr>
+            {/* <tr>
               <th>Body</th>
               <td>{post.body}</td>
-            </tr>
+            </tr> */}
             <tr>
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
@@ -58,7 +58,13 @@ const Post = ({ post }) => {
           </tbody>
         </table>
       </div>
+      <main id="postContent">
+        <p>{post.body}</p>
+      </main>
       <nav className="rw-button-group">
+        <a href="#" className="rw-button rw-button-green">
+          Share
+        </a>
         <Link
           to={routes.editPost({ id: post.id })}
           className="rw-button rw-button-blue"
