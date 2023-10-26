@@ -37,15 +37,21 @@ const PostsList = ({ posts }) => {
   return (
     <div className="rw-segment rw-table-wrapper-responsive">
       <div id="container">
-        <main class="UI-list">
+        <main className="UI-list">
           <ul id="listUI">
-          {posts.map((post) => (
-            <li class="listUI-item" key={post.id}>
-              <b>{truncate(post.title)}{' '}<a href={`../permalinks/${post.id}`} className="djm-rw-button djm-rw-button-small">🔗</a>{' '}
-
-              </b>
-            </li>
-          ))}
+            {posts.map((post) => (
+              <li className="listUI-item" key={post.id}>
+                <b>
+                  {truncate(post.title)}{' '}
+                  <a
+                    href={`../permalinks/${post.id}`}
+                    className="djm-rw-button djm-rw-button-small"
+                  >
+                    🔗
+                  </a>{' '}
+                </b>
+              </li>
+            ))}
           </ul>
         </main>
       </div>
