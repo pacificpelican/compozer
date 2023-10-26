@@ -20,12 +20,12 @@ const shareThis = (stuff) => {
   let shareData = {
     title: stuff.title,
     text: stuff.body,
-    url: stuff.url,
+    // url: stuff.url,
   }
   console.log('ok ' + stuff.body)
   try {
     navigator.share(shareData)
-    resultPara.textContent = 'MDN shared successfully'
+    resultPara.textContent = 'POST shared successfully'
   } catch (err) {
     resultPara.textContent = `Error: ${err}`
   }

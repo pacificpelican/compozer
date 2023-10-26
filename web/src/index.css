@@ -86,3 +86,7 @@ h1 a {
     padding-block-start: calc(3vw + 6pt);
   }
 }
+
+.err {
+  color: red;
+}
