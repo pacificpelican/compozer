@@ -9,11 +9,6 @@ body {
 }
 
 textarea#chatItem {
-  height: 80vh;
-  width: 94vw;
-}
-
-textarea#chatItem {
   font-size: 1.5em;
   padding-top: calc(1vw + 5pt);
   padding-left: calc(1vh + 2pt);
@@ -73,6 +68,14 @@ h1 a {
     padding-block-start: calc(3vw + 6pt);
   }
 
+  input#title {
+    width: calc(50vw + 15pt + 7.5em);
+  }
+  textarea#chatItem {
+    height: calc(50vh);
+    width: calc(50vw + 10pt + 5em);
+  }
+
 }
 
 @media (max-width: 750px) {
@@ -84,6 +87,15 @@ h1 a {
     padding-inline-end: calc(3vw + 6pt);
     padding-block-end: calc(3vw + 6pt);
     padding-block-start: calc(3vw + 6pt);
+  }
+
+  input#title {
+    width: calc(95vw);
+  }
+
+  textarea#chatItem {
+    height: calc(60vh);
+    width: calc(95vw);
   }
 }
 
