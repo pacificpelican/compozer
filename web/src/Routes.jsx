@@ -22,6 +22,7 @@ const Routes = () => {
       <Route path="/reset-password" page={ResetPasswordPage} name="resetPassword" />
       <Route path="/permalinks/{id:Int}" page={PermalinkPage} name="permalink" />
       <Route path="/viewer" page={ViewerPage} name="viewer" />
+      <Route path="/admin" page={AdminPage} name="admin" />
       <Route path="/compozer" page={CompozerPage} name="compozer" />
       <Set wrap={ScaffoldLayout} title="Posts" titleTo="posts" buttonLabel="New Post" buttonTo="newPost">
         <Route path="/posts/new" page={PostNewPostPage} name="newPost" />

@@ -8,11 +8,10 @@ const CompozerPage = () => {
     <>
       <MetaTags title="Home" description="Home page" />
       <Banner />
-      {/* <h1>COMPOZE_prototype</h1> */}
-
-
 
       <NewPost />
+{/*
+      <span id="currentUser">user: </span> */}
     </>
   )
 }

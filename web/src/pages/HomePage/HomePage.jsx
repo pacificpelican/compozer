@@ -17,14 +17,20 @@ const HomePage = () => {
       </p>
       <ul>
         <li>
-          <a href="/posts">Posts (default UI)</a>
+          <a href="/login">Log In (default UI)</a>
         </li>
+        {/* <li>
+          <a href="/posts">Posts (default UI)</a>
+        </li> */}
         <li>
           <a href="/compozer">Compozer create screen (beta app UI)</a>
         </li>
         <li>
           <a href="/viewer">Compozer/Viewer list view (beta app UI)</a>
         </li>
+        {/* <li>
+          <a href="/admin">Compozer/Viewer Admin list view (beta app UI)</a>
+        </li> */}
       </ul>
       <aside id="keyboard-logo">
         <img
