@@ -14,10 +14,11 @@ generator client {
 model User {
   id                  Int       @id @default(autoincrement())
   email               String    @unique
-  hashedPassword      String // <─┐
-  salt                String // <─┼─ add these lines
-  resetToken          String? // <─┤
-  resetTokenExpiresAt DateTime? // <─┘
+  hashedPassword      String
+  salt                String
+  resetToken          String?
+  resetTokenExpiresAt DateTime?
+  posts               Post[]    // Define the one-to-many relationship
 }
 
 model Post {
@@ -25,4 +26,6 @@ model Post {
   title     String
   body      String
   createdAt DateTime @default(now())
+  userId    Int      // Foreign key field
+  user      User     @relation(fields: [userId], references: [id]) // Define the relationship
 }
