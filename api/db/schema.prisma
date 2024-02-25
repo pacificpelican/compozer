@@ -18,7 +18,7 @@ model User {
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
-  posts               Post[]    // Define the one-to-many relationship
+  posts               Post[] // Define the one-to-many relationship
 }
 
 model Post {
@@ -26,6 +26,6 @@ model Post {
   title     String
   body      String
   createdAt DateTime @default(now())
-  userId    Int      // Foreign key field
+  userId    Int      @default(0) // Foreign key field
   user      User     @relation(fields: [userId], references: [id]) // Define the relationship
 }
