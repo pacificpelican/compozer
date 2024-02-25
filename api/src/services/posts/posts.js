@@ -10,11 +10,20 @@ export const post = ({ id }) => {
   })
 }
 
-export const createPost = ({ input }) => {
+export const createPost = ({ input }, { context }) => {
+  const { currentUser } = context;
+
+  if (!currentUser) {
+    throw new Error('Authentication required.');
+  }
+
   return db.post.create({
-    data: input,
-  })
-}
+    data: {
+      ...input,
+      userId: currentUser.id,
+    },
+  });
+};
 
 export const updatePost = ({ id, input }) => {
   return db.post.update({
