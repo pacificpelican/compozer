@@ -23,6 +23,7 @@
   },
   "packageManager": "yarn@3.6.3",
   "dependencies": {
-    "@redwoodjs/auth": "^7.0.2"
+    "@redwoodjs/auth": "^7.0.2",
+    "react-markdown": "^9.0.1"
   }
 }

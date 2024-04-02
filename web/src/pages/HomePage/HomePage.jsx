@@ -28,6 +28,9 @@ const HomePage = () => {
         <li>
           <a href="/viewer">Compozer/Viewer list view (beta app UI)</a>
         </li>
+        <li>
+          <a href="/about">About</a>
+        </li>
         {/* <li>
           <a href="/admin">Compozer/Viewer Admin list view (beta app UI)</a>
         </li> */}

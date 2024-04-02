@@ -102,3 +102,18 @@ h1 a {
 .err {
   color: red;
 }
+
+p#backButton {
+  font-size: 3.5em;
+  padding: 5pt;
+}
+
+img#ekey {
+  float: right;
+  width: 47vw;
+  border-radius: 2em;
+}
+
+p#f-con a, footer#about a, h1#about a {
+  color: #3f495e;
+}
