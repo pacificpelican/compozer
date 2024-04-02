@@ -33,4 +33,4 @@ yarn redwood dev
 
 <i>more info in the [Redwood README](./REDWOOD-README.md)</i>
 
-![keyboard ocean logo for Compozer](iac.png "keyboard ocean logo for Compozer")
+![keyboard ocean logo for Compozer](./web/public/iac.png "keyboard ocean logo for Compozer")
